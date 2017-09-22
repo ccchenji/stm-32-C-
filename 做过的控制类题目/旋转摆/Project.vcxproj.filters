@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="CORE" />
+    <Filter Include="HARDWARE" />
+    <Filter Include="HARDWARE\BEEP" />
+    <Filter Include="HARDWARE\DataScope_DP" />
+    <Filter Include="HARDWARE\DMP" />
+    <Filter Include="HARDWARE\filter" />
+    <Filter Include="HARDWARE\IIC" />
+    <Filter Include="HARDWARE\KEY" />
+    <Filter Include="HARDWARE\LED" />
+    <Filter Include="HARDWARE\MPU6050" />
+    <Filter Include="HARDWARE\OLED" />
+    <Filter Include="HARDWARE\TIMER" />
+    <Filter Include="STM32F10x_FWLib" />
+    <Filter Include="STM32F10x_FWLib\inc" />
+    <Filter Include="STM32F10x_FWLib\src" />
+    <Filter Include="SYSTEM" />
+    <Filter Include="SYSTEM\delay" />
+    <Filter Include="SYSTEM\sys" />
+    <Filter Include="SYSTEM\usart" />
+    <Filter Include="USER" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CORE\core_cm3.c">
+    <Filter>CORE</Filter>
+    </ClCompile>
+    <ClCompile Include="CORE\startup_stm32f10x_hd.s">
+    <Filter>CORE</Filter>
+    </ClCompile>
+    <ClCompile Include="CORE\startup_stm32f10x_md.s">
+    <Filter>CORE</Filter>
+    </ClCompile>
+    <ClInclude Include="CORE\core_cm3.h">
+    <Filter>CORE</Filter>
+    </ClInclude>
+    <ClCompile Include="HARDWARE\BEEP\beep.c">
+    <Filter>HARDWARE\BEEP</Filter>
+    </ClCompile>
+    <ClInclude Include="HARDWARE\BEEP\beep.h">
+    <Filter>HARDWARE\BEEP</Filter>
+    </ClInclude>
+    <ClCompile Include="HARDWARE\DataScope_DP\DataScope_DP.C">
+    <Filter>HARDWARE\DataScope_DP</Filter>
+    </ClCompile>
+    <ClInclude Include="HARDWARE\DataScope_DP\DataScope_DP.h">
+    <Filter>HARDWARE\DataScope_DP</Filter>
+    </ClInclude>
+    <ClCompile Include="HARDWARE\DMP\inv_mpu.c">
+    <Filter>HARDWARE\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="HARDWARE\DMP\inv_mpu_dmp_motion_driver.c">
+    <Filter>HARDWARE\DMP</Filter>
+    </ClCompile>
+    <ClInclude Include="HARDWARE\DMP\dmpKey.h">
+    <Filter>HARDWARE\DMP</Filter>
+    </ClInclude>
+    <ClInclude Include="HARDWARE\DMP\dmpmap.h">
+    <Filter>HARDWARE\DMP</Filter>
+    </ClInclude>
+    <ClInclude Include="HARDWARE\DMP\inv_mpu.h">
+    <Filter>HARDWARE\DMP</Filter>
+    </ClInclude>
+    <ClInclude Include="HARDWARE\DMP\inv_mpu_dmp_motion_driver.h">
+    <Filter>HARDWARE\DMP</Filter>
+    </ClInclude>
+    <ClCompile Include="HARDWARE\filter\filter.c">
+    <Filter>HARDWARE\filter</Filter>
+    </ClCompile>
+    <ClInclude Include="HARDWARE\filter\filter.h">
+    <Filter>HARDWARE\filter</Filter>
+    </ClInclude>
+    <ClCompile Include="HARDWARE\IIC\IOI2C.c">
+    <Filter>HARDWARE\IIC</Filter>
+    </ClCompile>
+    <ClInclude Include="HARDWARE\IIC\IOI2C.h">
+    <Filter>HARDWARE\IIC</Filter>
+    </ClInclude>
+    <ClCompile Include="HARDWARE\KEY\key.c">
+    <Filter>HARDWARE\KEY</Filter>
+    </ClCompile>
+    <ClInclude Include="HARDWARE\KEY\key.h">
+    <Filter>HARDWARE\KEY</Filter>
+    </ClInclude>
+    <ClCompile Include="HARDWARE\LED\led.c">
+    <Filter>HARDWARE\LED</Filter>
+    </ClCompile>
+    <ClInclude Include="HARDWARE\LED\led.h">
+    <Filter>HARDWARE\LED</Filter>
+    </ClInclude>
+    <ClCompile Include="HARDWARE\MPU6050\MPU6050.c">
+    <Filter>HARDWARE\MPU6050</Filter>
+    </ClCompile>
+    <ClInclude Include="HARDWARE\MPU6050\mpu6050.h">
+    <Filter>HARDWARE\MPU6050</Filter>
+    </ClInclude>
+    <ClCompile Include="HARDWARE\OLED\oled.c">
+    <Filter>HARDWARE\OLED</Filter>
+    </ClCompile>
+    <ClInclude Include="HARDWARE\OLED\bmp.h">
+    <Filter>HARDWARE\OLED</Filter>
+    </ClInclude>
+    <ClInclude Include="HARDWARE\OLED\oled.h">
+    <Filter>HARDWARE\OLED</Filter>
+    </ClInclude>
+    <ClInclude Include="HARDWARE\OLED\oledfont.h">
+    <Filter>HARDWARE\OLED</Filter>
+    </ClInclude>
+    <ClCompile Include="HARDWARE\TIMER\timer.c">
+    <Filter>HARDWARE\TIMER</Filter>
+    </ClCompile>
+    <ClInclude Include="HARDWARE\TIMER\timer.h">
+    <Filter>HARDWARE\TIMER</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\misc.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_adc.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_bkp.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_can.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_cec.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_crc.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_dac.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_dma.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_exti.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_flash.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_fsmc.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_gpio.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_i2c.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_iwdg.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_pwr.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_rcc.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_rtc.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_sdio.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_spi.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_tim.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_usart.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="STM32F10x_FWLib\inc\stm32f10x_wwdg.h">
+    <Filter>STM32F10x_FWLib\inc</Filter>
+    </ClInclude>
+    <ClCompile Include="STM32F10x_FWLib\src\misc.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_adc.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_bkp.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_can.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_cec.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_crc.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_dac.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_dbgmcu.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_dma.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_exti.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_flash.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_fsmc.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_gpio.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_i2c.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_iwdg.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_pwr.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_rcc.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_rtc.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_sdio.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_spi.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_tim.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_usart.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="STM32F10x_FWLib\src\stm32f10x_wwdg.c">
+    <Filter>STM32F10x_FWLib\src</Filter>
+    </ClCompile>
+    <ClCompile Include="SYSTEM\delay\delay.c">
+    <Filter>SYSTEM\delay</Filter>
+    </ClCompile>
+    <ClInclude Include="SYSTEM\delay\delay.h">
+    <Filter>SYSTEM\delay</Filter>
+    </ClInclude>
+    <ClCompile Include="SYSTEM\sys\sys.c">
+    <Filter>SYSTEM\sys</Filter>
+    </ClCompile>
+    <ClInclude Include="SYSTEM\sys\sys.h">
+    <Filter>SYSTEM\sys</Filter>
+    </ClInclude>
+    <ClCompile Include="SYSTEM\usart\usart.c">
+    <Filter>SYSTEM\usart</Filter>
+    </ClCompile>
+    <ClInclude Include="SYSTEM\usart\usart.h">
+    <Filter>SYSTEM\usart</Filter>
+    </ClInclude>
+    <ClCompile Include="USER\main.c">
+    <Filter>USER</Filter>
+    </ClCompile>
+    <ClCompile Include="USER\stm32f10x_it.c">
+    <Filter>USER</Filter>
+    </ClCompile>
+    <ClCompile Include="USER\system_stm32f10x.c">
+    <Filter>USER</Filter>
+    </ClCompile>
+    <ClInclude Include="USER\stm32f10x.h">
+    <Filter>USER</Filter>
+    </ClInclude>
+    <ClInclude Include="USER\stm32f10x_conf.h">
+    <Filter>USER</Filter>
+    </ClInclude>
+    <ClInclude Include="USER\stm32f10x_it.h">
+    <Filter>USER</Filter>
+    </ClInclude>
+    <ClInclude Include="USER\system_stm32f10x.h">
+    <Filter>USER</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
