@@ -1,0 +1,107 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/01/2017  12:22:55  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE PWM_12.obj TO 12输出pwm RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  PWM_12.obj (PWM_12)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  12输出pwm (PWM_12)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+                    0000H     0800H                  *** GAP ***
+            CODE    0800H     0055H     UNIT         ?C?LIB_CODE
+            CODE    0855H     0022H     UNIT         ?PR?PWM_PORT?PWM_12
+            CODE    0877H     0019H     UNIT         ?PR?_PWM_CHANGE?PWM_12
+
+
+
+OVERLAY MAP OF MODULE:   12输出pwm (PWM_12)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+
+
+SYMBOL TABLE OF MODULE:  12输出pwm (PWM_12)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        PWM_12
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00F9H         PUBLIC        CH
+  D:00E9H         PUBLIC        CL
+  D:00FAH         PUBLIC        CCAP0H
+  D:00FBH         PUBLIC        CCAP1H
+  D:00EAH         PUBLIC        CCAP0L
+  B:00D8H.6       PUBLIC        CR
+  D:00EBH         PUBLIC        CCAP1L
+  D:00DAH         PUBLIC        CCAPM0
+  D:00DBH         PUBLIC        CCAPM1
+  C:0855H         PUBLIC        PWM_port
+  D:00D9H         PUBLIC        CMOD
+  D:00D8H         PUBLIC        CCON
+  C:0877H         PUBLIC        _PWM_change
+  D:00F3H         PUBLIC        PCAPWM1
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/01/2017  12:22:55  PAGE 2
+
+
+  -------         PROC          PWM_PORT
+  C:0855H         LINE#         2
+  C:0855H         LINE#         3
+  C:0855H         LINE#         4
+  C:0858H         LINE#         5
+  C:085AH         LINE#         6
+  C:085CH         LINE#         7
+  C:085FH         LINE#         9
+  C:0865H         LINE#         10
+  C:0868H         LINE#         12
+  C:086EH         LINE#         13
+  C:0871H         LINE#         14
+  C:0874H         LINE#         15
+  C:0876H         LINE#         16
+  -------         ENDPROC       PWM_PORT
+  -------         PROC          _PWM_CHANGE
+  D:0007H         SYMBOL        a
+  C:0877H         LINE#         22
+  C:0877H         LINE#         23
+  C:0877H         LINE#         24
+  C:088CH         LINE#         25
+  C:088FH         LINE#         26
+  -------         ENDPROC       _PWM_CHANGE
+  -------         ENDMOD        PWM_12
+
+  -------         MODULE        ?C?UIDIV
+  C:0800H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PWM_PORT?PWM_12
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PWM_CHANGE?PWM_12
+
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 003BH BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=144
+LINK/LOCATE RUN COMPLETE.  3 WARNING(S),  0 ERROR(S)

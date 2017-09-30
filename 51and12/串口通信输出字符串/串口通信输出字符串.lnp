@@ -1,0 +1,3 @@
+"print.obj" 
+TO "串口通信输出字符串" 
+RAMSIZE(256) 

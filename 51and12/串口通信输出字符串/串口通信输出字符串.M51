@@ -1,0 +1,86 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        02/28/2017  17:40:58  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE print.obj TO 串口通信输出字符串 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  print.obj (PRINT)
+
+
+LINK MAP OF MODULE:  串口通信输出字符串 (PRINT)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+                    0000H     0800H                  *** GAP ***
+            CODE    0800H     000EH     UNIT         ?PR?_HAL_UART_PUTCHAR?PRINT
+            CODE    080EH     0006H     UNIT         ?PR?_PUTCHAR?PRINT
+
+
+
+OVERLAY MAP OF MODULE:   串口通信输出字符串 (PRINT)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+
+
+SYMBOL TABLE OF MODULE:  串口通信输出字符串 (PRINT)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        PRINT
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:00A8H.4       PUBLIC        ES
+  B:0098H.1       PUBLIC        TI
+  D:0099H         PUBLIC        SBUF
+  C:0800H         PUBLIC        _hal_uart_putchar
+  C:080EH         PUBLIC        _putchar
+  -------         PROC          _HAL_UART_PUTCHAR
+  D:0007H         SYMBOL        i
+  C:0800H         LINE#         2
+  C:0800H         LINE#         3
+  C:0800H         LINE#         4
+  C:0802H         LINE#         5
+  C:0804H         LINE#         6
+  C:0806H         LINE#         7
+  C:0809H         LINE#         8
+  C:080BH         LINE#         9
+  C:080DH         LINE#         10
+BL51 BANKED LINKER/LOCATER V6.22                                                      02/28/2017  17:40:58  PAGE 2
+
+
+  -------         ENDPROC       _HAL_UART_PUTCHAR
+  -------         PROC          _PUTCHAR
+  D:0006H         SYMBOL        c
+  C:080EH         LINE#         11
+  C:0810H         LINE#         12
+  C:0810H         LINE#         13
+  C:0813H         LINE#         14
+  C:0813H         LINE#         15
+  -------         ENDPROC       _PUTCHAR
+  -------         ENDMOD        PRINT
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PUTCHAR?PRINT
+
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0014H BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=20
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)

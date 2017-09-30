@@ -1,0 +1,18 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\hello\Desktop\51and12\串口通信输出字符串\串口通信输出字符串.uvproj
+Project File Date:  02/25/2017
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling print.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PUTCHAR?PRINT
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+Program Size: data=8.0 xdata=0 code=20
+creating hex file from "串口通信输出字符串"...
+"串口通信输出字符串" - 0 Error(s), 2 Warning(s).

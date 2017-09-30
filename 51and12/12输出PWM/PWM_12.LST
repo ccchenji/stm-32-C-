@@ -1,0 +1,50 @@
+C51 COMPILER V9.01   PWM_12                                                                03/01/2017 12:22:55 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE PWM_12
+OBJECT MODULE PLACED IN PWM_12.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE PWM_12.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <PWM_12.h>
+   2          void PWM_port()
+   3          {
+   4   1          CCON=0;
+   5   1              CL=0;
+   6   1              CH=0;
+   7   1              CMOD=0X02;//可以调节PWM的输出频率（此时的晶振频率为SYSclk/2)
+   8   1      
+   9   1              CCAP0H=CCAP0L=0X80;//调节PWM0的占空比（此时的占空比为50%）（P1^3口输出）
+  10   1              CCAPM0=0X42;//配置CCAPM0为脉宽调节模式
+  11   1      
+  12   1          CCAP1H=CCAP1L=0XFF;//调节PWM1的占空比（此时为0%）（P1^4口输出）
+  13   1              PCAPWM1=0X03;
+  14   1              CCAPM1=0X42;//配置CCAPM1为脉宽调节模式
+  15   1              CR=1;//打开PCA
+  16   1      }
+  17          /**************************PWM的频率计算方式************************
+  18           ***************PWM的频率=PCA时钟输入源频率/256*********************/
+  19          
+  20          
+  21          /*******************调节占空比的函数*********************************/
+  22          void PWM_change(unsigned char a)
+  23          {
+  24   1        CCAP0H=255-255*a/100; 
+  25   1        CCAP0L=CCAP0H;
+  26   1      }
+  27          //CCAP0H的值等于255-255*占空比/100              
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     59    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
