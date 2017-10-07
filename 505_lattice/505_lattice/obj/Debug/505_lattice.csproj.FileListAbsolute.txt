@@ -1,0 +1,10 @@
+C:\Users\0\Desktop\C#\505_lattice\505_lattice\bin\Debug\505_lattice.exe.config
+C:\Users\0\Desktop\C#\505_lattice\505_lattice\bin\Debug\505_lattice.exe
+C:\Users\0\Desktop\C#\505_lattice\505_lattice\bin\Debug\505_lattice.pdb
+C:\Users\0\Desktop\C#\505_lattice\505_lattice\obj\Debug\505_lattice.csprojResolveAssemblyReference.cache
+C:\Users\0\Desktop\C#\505_lattice\505_lattice\obj\Debug\_505_lattice.Form1.resources
+C:\Users\0\Desktop\C#\505_lattice\505_lattice\obj\Debug\_505_lattice.Properties.Resources.resources
+C:\Users\0\Desktop\C#\505_lattice\505_lattice\obj\Debug\505_lattice.csproj.GenerateResource.Cache
+C:\Users\0\Desktop\C#\505_lattice\505_lattice\obj\Debug\505_lattice.exe
+C:\Users\0\Desktop\C#\505_lattice\505_lattice\obj\Debug\505_lattice.pdb
+C:\Users\0\Desktop\C#\505_lattice\505_lattice\obj\Debug\_505_lattice.Form2.resources
