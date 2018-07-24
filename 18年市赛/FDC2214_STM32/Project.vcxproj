@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2F91FE68-F5D2-4C86-9323-882D64B61895}</ProjectGuid>
+    <RootNamespace>Project2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>FDC2214_STM32</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>USE_STDPERIPH_DRIVER;STM32F10X_HD;__CC_ARM</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>.\CMSIS;.\Delay;.\Fwlib\inc;.\Hardware;.\USER;F:\keil5\ARM\ARMCC\include</IncludePath>
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <ExcludePath />
+    <SourcePath />
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="CMSIS\core_cm3.c" />
+    <ClCompile Include="CMSIS\system_stm32f10x.c" />
+    <ClCompile Include="CMSIS\startup_stm32f10x_hd.s" />
+    <ClCompile Include="CMSIS\startup_stm32f10x_md.s" />
+    <ClInclude Include="CMSIS\core_cm3.h" />
+    <ClInclude Include="CMSIS\stm32f10x.h" />
+    <ClInclude Include="CMSIS\system_stm32f10x.h" />
+    <ClCompile Include="Delay\Delay.c" />
+    <ClInclude Include="Delay\Delay.h" />
+    <ClInclude Include="Fwlib\inc\misc.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_adc.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_bkp.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_can.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_cec.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_crc.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_dac.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_dbgmcu.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_dma.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_exti.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_flash.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_fsmc.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_gpio.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_i2c.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_iwdg.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_pwr.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_rcc.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_rtc.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_sdio.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_spi.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_tim.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_usart.h" />
+    <ClInclude Include="Fwlib\inc\stm32f10x_wwdg.h" />
+    <ClCompile Include="Fwlib\src\misc.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_adc.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_bkp.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_can.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_cec.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_crc.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_dac.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_dbgmcu.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_dma.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_exti.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_flash.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_fsmc.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_gpio.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_i2c.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_iwdg.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_pwr.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_rcc.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_rtc.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_sdio.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_spi.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_tim.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_usart.c" />
+    <ClCompile Include="Fwlib\src\stm32f10x_wwdg.c" />
+    <ClCompile Include="Hardware\FDC2214.c" />
+    <ClCompile Include="Hardware\IIC.c" />
+    <ClCompile Include="Hardware\USART_1.c" />
+    <ClInclude Include="Hardware\FDC2214.h" />
+    <ClInclude Include="Hardware\IIC.h" />
+    <ClInclude Include="Hardware\USART_1.h" />
+    <ClCompile Include="USER\main.c" />
+    <ClCompile Include="USER\stm32f10x_it.c" />
+    <ClInclude Include="USER\stm32f10x_conf.h" />
+    <ClInclude Include="USER\stm32f10x_it.h" />
+  </ItemGroup>
+</Project>

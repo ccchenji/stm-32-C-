@@ -1,0 +1,9 @@
+..\obj\stack.o: ..\myFile\oled\Stack\stack.c
+..\obj\stack.o: ..\myFile\oled\Stack\stack.h
+..\obj\stack.o: F:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\stack.o: ..\myFile\oled\menu\menu.h
+..\obj\stack.o: F:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\stack.o: F:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
+..\obj\stack.o: F:\keil5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\stack.o: F:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\stack.o: F:\keil5\ARM\ARMCC\Bin\..\include\math.h

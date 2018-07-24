@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"fdc2214_driver\startup_stm32f103xe.o"
+"fdc2214_driver\fdc2214.o"
+"fdc2214_driver\myiic.o"
+"fdc2214_driver\main.o"
+"fdc2214_driver\stm32f1xx_it.o"
+"fdc2214_driver\stm32f1xx_hal_msp.o"
+"fdc2214_driver\stm32f1xx_hal_gpio_ex.o"
+"fdc2214_driver\stm32f1xx_hal_i2c.o"
+"fdc2214_driver\stm32f1xx_hal_tim.o"
+"fdc2214_driver\stm32f1xx_hal_tim_ex.o"
+"fdc2214_driver\stm32f1xx_hal_uart.o"
+"fdc2214_driver\stm32f1xx_hal.o"
+"fdc2214_driver\stm32f1xx_hal_rcc.o"
+"fdc2214_driver\stm32f1xx_hal_rcc_ex.o"
+"fdc2214_driver\stm32f1xx_hal_gpio.o"
+"fdc2214_driver\stm32f1xx_hal_dma.o"
+"fdc2214_driver\stm32f1xx_hal_cortex.o"
+"fdc2214_driver\stm32f1xx_hal_pwr.o"
+"fdc2214_driver\stm32f1xx_hal_flash.o"
+"fdc2214_driver\stm32f1xx_hal_flash_ex.o"
+"fdc2214_driver\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "FDC2214_Driver\FDC2214_Driver.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "FDC2214_Driver.map" -o FDC2214_Driver\FDC2214_Driver.axf
