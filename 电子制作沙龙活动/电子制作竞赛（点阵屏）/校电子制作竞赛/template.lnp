@@ -1,0 +1,7 @@
+"main.obj",
+"Picture.obj",
+"interruption.obj",
+"print.obj",
+"AD.obj" 
+TO "template" 
+RAMSIZE(256) 

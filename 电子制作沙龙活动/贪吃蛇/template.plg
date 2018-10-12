@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\0\Desktop\电子制作沙龙活动\电子制作竞赛（点阵屏）\校电子制作竞赛\template.uvproj
+Project File Date:  10/27/2017
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+compiling Picture.c...
+compiling interruption.c...
+compiling print.c...
+compiling AD.c...
+AD.C(11): warning C275: expression with possibly no effect
+AD.C(12): warning C275: expression with possibly no effect
+AD.C(13): warning C275: expression with possibly no effect
+AD.C(14): warning C275: expression with possibly no effect
+AD.C(15): warning C275: expression with possibly no effect
+AD.C(21): warning C280: 'k': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DRAWPOINT?PICTURE
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INT0INIT?INTERRUPTION
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INT1INIT?INTERRUPTION
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER1INIT?INTERRUPTION
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PUTCHAR?PRINT
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD_GET?AD
+Program Size: data=60.0 xdata=0 code=1041
+creating hex file from "template"...
+"template" - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DRAWPOINT?PICTURE
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INT0INIT?INTERRUPTION
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?INT1INIT?INTERRUPTION
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER1INIT?INTERRUPTION
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PUTCHAR?PRINT
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?AD_GET?AD
+Program Size: data=60.0 xdata=0 code=1041
+creating hex file from "template"...
+"template" - 0 Error(s), 6 Warning(s).

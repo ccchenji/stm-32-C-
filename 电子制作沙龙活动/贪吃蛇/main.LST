@@ -1,0 +1,51 @@
+C51 COMPILER V9.01   MAIN                                                                  10/12/2018 21:10:35 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: F:\Keil5\C51\BIN\C51.EXE main.c LARGE ROM(COMPACT) OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS
+                    -(2)
+
+line level    source
+
+   1          /**************************************************************************************
+   2                            8*8LED点阵———显示数字实验                                              
+   3          ***************************************************************************************/
+   4          
+   5          #include "reg52.h"       //此文件中定义了单片机的一些特殊功能寄存器
+   6          #include "Picture.h"
+   7          #include "allnum.h"
+   8          #include "AD.h"
+   9          #include "Snake.h"
+  10          /*******************************************************************************
+  11          * 函 数 名       : main
+  12          * 函数功能     : 主函数
+  13          * 输    入       : 无
+  14          * 输    出       : 无
+  15          *******************************************************************************/
+  16          sbit Key1=P2^1; 
+  17          extern u8 smill[32];
+  18          void main()
+  19          {   
+  20   1        Timer0Init();
+  21   1        InitADC();
+  22   1        while(1)
+  23   1        {
+  24   2          //My_Snake();
+  25   2           char_roll(smill,4);
+  26   2        }
+  27   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     21    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

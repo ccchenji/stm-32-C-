@@ -1,0 +1,7 @@
+"main.obj",
+"Picture.obj",
+"interruption.obj",
+"AD.obj",
+"snake.obj" 
+TO "template" 
+RAMSIZE(256) 

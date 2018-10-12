@@ -1,0 +1,38 @@
+C51 COMPILER V9.01   PRINT                                                                 10/21/2017 11:38:26 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE PRINT
+OBJECT MODULE PLACED IN print.OBJ
+COMPILER INVOKED BY: D:\KEIL5\C51\BIN\C51.EXE print.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include "print.h"
+   2          void hal_uart_putchar(char i)  
+   3          {  
+   4   1          ES = 0;  
+   5   1          TI = 0; //清空发送完中断请求标志位  
+   6   1          SBUF = i;  //将数据放入寄存器发送  
+   7   1          while(TI == 0);//等待发送完毕，发送完毕 TI == 1  
+   8   1          TI = 0; //清空发送完中断请求标志位  
+   9   1          ES = 1;  
+  10   1      } 
+  11          char putchar(char c)  
+  12          {  
+  13   1          hal_uart_putchar(c);  
+  14   1          return c;  
+  15   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     20    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

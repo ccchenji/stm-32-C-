@@ -1,0 +1,271 @@
+C51 COMPILER V9.01   SNAKE                                                                 10/10/2017 17:55:07 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE SNAKE
+OBJECT MODULE PLACED IN snake.OBJ
+COMPILER INVOKED BY: D:\KEIL5\C51\BIN\C51.EXE snake.c LARGE OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include "Snake.h"
+   2          #include "Picture.h"
+   3          sbit Key1=P2^1;//上
+   4          sbit Key2=P2^0;//左
+   5          sbit Key3=P3^2;//右
+   6          sbit Key4=P3^3;//下
+   7          extern int timer;
+   8          int seed=0;
+   9          int time=0;
+  10          
+  11          short len=1; 
+  12          
+  13          short x=1;
+  14          short y=1;
+  15          
+  16          short ch =0;
+  17          
+  18          short snake_x [10]={1};
+  19          short snake_y [10]={1};
+  20          
+  21          short food_x=4;
+  22          short food_y=4;
+  23          
+  24          
+  25          short flag_x_go=1;
+  26          short flag_x_bank=0;
+  27          short flag_y_go=0;
+  28          short flag_y_bank=0; 
+  29           
+  30          void My_Snake()
+  31          {
+  32   1           DrawPoint(food_x,food_y);
+  33   1           snake_run();
+  34   1           snake_nature();
+  35   1           if(live_or_die())
+  36   1            {
+  37   2               flag_x_go=1;
+  38   2               flag_x_bank=0;
+  39   2               flag_y_go=0;
+  40   2               flag_y_bank=0; 
+  41   2               x=1;
+  42   2               y=1;
+  43   2               len=1;
+  44   2            }
+  45   1      }
+  46          
+  47          //获得蛇的食物
+  48          void foods()
+  49          {
+  50   1          int i=0;
+  51   1          srand(seed);
+  52   1          food_x=rand()%8+1;
+  53   1          food_y=rand()%8+1;
+  54   1          DrawPoint(food_x,food_y);
+  55   1        for(i=0;i<len;i++)
+C51 COMPILER V9.01   SNAKE                                                                 10/10/2017 17:55:07 PAGE 2   
+
+  56   1        {
+  57   2            if((food_x==snake_x[i])&&(food_y==snake_y[i]))
+  58   2            {
+  59   3              food_x=rand()%8+1;
+  60   3              food_y=rand()%8+1;
+  61   3              i=-1;
+  62   3            }
+  63   2        }
+  64   1      } 
+  65          
+  66          //判断蛇是否死亡
+  67          int live_or_die()
+  68          {
+  69   1         short i=0;
+  70   1         if(len>5)
+  71   1         {
+  72   2         for(i=1;i<len-1;i++)
+  73   2         {
+  74   3            if(((x==snake_x[i])&&(y==snake_y[i])))
+  75   3            {
+  76   4             return 1;
+  77   4            }
+  78   3         }
+  79   2         }
+  80   1         if(x==0||x==9||y==0||y==9)
+  81   1         {
+  82   2             return 1;
+  83   2         }
+  84   1         return 0;
+  85   1      } 
+  86          
+  87          //蛇的属性
+  88          void snake_nature()
+  89          {
+  90   1         int i=0;
+  91   1         if((x==food_x)&&(y==food_y))
+  92   1         {
+  93   2            len++;
+  94   2            foods();
+  95   2         }
+  96   1         snake_x[len]=x;
+  97   1         snake_y[len]=y;
+  98   1         for(i=0;i<len;i++)
+  99   1         {
+ 100   2           snake_x[i]=snake_x[i+1];
+ 101   2           snake_y[i]=snake_y[i+1];
+ 102   2         }
+ 103   1         for(i=0;i<len;i++)
+ 104   1         {
+ 105   2            DrawPoint(snake_x[i],snake_y[i]);
+ 106   2         }
+ 107   1      }
+ 108          
+ 109          //让蛇自己运动
+ 110          void snake_run()
+ 111          {
+ 112   1           Get_flag();
+ 113   1           if(time>=700)
+ 114   1           {
+ 115   2           if(flag_x_go==1)
+ 116   2           {
+ 117   3            x+=1;
+C51 COMPILER V9.01   SNAKE                                                                 10/10/2017 17:55:07 PAGE 3   
+
+ 118   3           }
+ 119   2           if(flag_x_bank==1)
+ 120   2           {
+ 121   3            x-=1;
+ 122   3           }
+ 123   2           if(flag_y_go==1)
+ 124   2           {
+ 125   3            y+=1;
+ 126   3           }
+ 127   2           if(flag_y_bank==1)
+ 128   2           {
+ 129   3            y-=1;
+ 130   3           }
+ 131   2           time=0;
+ 132   2          }
+ 133   1      
+ 134   1      } 
+ 135          
+ 136          void Get_flag()
+ 137          {
+ 138   1         if(Key1==0)
+ 139   1         {
+ 140   2           delay(1000);
+ 141   2           if(Key1==0)
+ 142   2           {
+ 143   3             ch=80;
+ 144   3           }
+ 145   2           while(!Key1);
+ 146   2         }else
+ 147   1         if(Key2==0)
+ 148   1         {
+ 149   2           delay(1000);
+ 150   2           if(Key2==0)
+ 151   2           {
+ 152   3             ch=77;  
+ 153   3           } 
+ 154   2            while(!Key2);    
+ 155   2         }else
+ 156   1         if(Key4==0)
+ 157   1         {
+ 158   2           delay(1000);
+ 159   2           if(Key4==0)
+ 160   2           {
+ 161   3              ch=72;   
+ 162   3           } 
+ 163   2           while(!Key4);
+ 164   2         }else
+ 165   1         if(Key3==0)
+ 166   1         {
+ 167   2            delay(1000);
+ 168   2           if(Key3==0)
+ 169   2           {
+ 170   3            ch=75; 
+ 171   3           }
+ 172   2           while(!Key3);
+ 173   2         }
+ 174   1       switch (ch)
+ 175   1         {
+ 176   2           case 72:
+ 177   2               if(flag_x_go==1||flag_x_bank==1)
+ 178   2                {
+ 179   3                   flag_x_go=0;
+C51 COMPILER V9.01   SNAKE                                                                 10/10/2017 17:55:07 PAGE 4   
+
+ 180   3                   flag_x_bank=0;
+ 181   3                   flag_y_go=0;
+ 182   3                   flag_y_bank=1;
+ 183   3                }break;
+ 184   2      
+ 185   2            case 80:
+ 186   2               if(flag_x_go==1||flag_x_bank==1)
+ 187   2                {
+ 188   3                   flag_x_go=0;
+ 189   3                   flag_x_bank=0;
+ 190   3                   flag_y_go=1;
+ 191   3                   flag_y_bank=0;
+ 192   3                }break;
+ 193   2                 
+ 194   2             case 75:
+ 195   2               if(flag_y_go==1||flag_y_bank==1)
+ 196   2                {
+ 197   3                   flag_x_go=0;
+ 198   3                   flag_x_bank=1;
+ 199   3                   flag_y_go=0;
+ 200   3                   flag_y_bank=0;
+ 201   3                 }break;
+ 202   2               
+ 203   2             case 77:
+ 204   2                if(flag_y_go==1||flag_y_bank==1)
+ 205   2                 {
+ 206   3                   flag_x_go=1;
+ 207   3                   flag_x_bank=0;
+ 208   3                   flag_y_go=0;
+ 209   3                   flag_y_bank=0;
+ 210   3                 }break;
+ 211   2                 
+ 212   2             default:
+ 213   2                  break;
+ 214   2         }
+ 215   1      }
+ 216          //定时器0的定时器中断
+ 217          void timer0() interrupt 1
+ 218          {  
+ 219   1        static int i=0;
+ 220   1        TH0=(65536-1000)/256; 
+ 221   1        TL0=(65536-1000)%256;
+ 222   1        i++;
+ 223   1        time++;
+ 224   1        timer--;
+ 225   1        if(timer<=0)
+ 226   1        {
+ 227   2           timer=0;
+ 228   2        }
+ 229   1        if(i>=100)
+ 230   1        {
+ 231   2           seed++;
+ 232   2           i=0;
+ 233   2           if(seed>2000)
+ 234   2           {
+ 235   3              seed=0;
+ 236   3           }
+ 237   2        }
+ 238   1      }
+ 239          
+ 240          
+
+C51 COMPILER V9.01   SNAKE                                                                 10/10/2017 17:55:07 PAGE 5   
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1409    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =     66       2
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

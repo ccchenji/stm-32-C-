@@ -1,0 +1,57 @@
+C51 COMPILER V9.01   AD                                                                    10/27/2017 20:47:01 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE AD
+OBJECT MODULE PLACED IN AD.OBJ
+COMPILER INVOKED BY: D:\KEIL5\C51\BIN\C51.EXE AD.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include "AD.h"
+   2          /**************************ADC初始化函数********************************/
+   3          void InitADC()
+   4          {
+   5   1         ADC_CONTR=0XC8;//没180个时钟周期转换一次，选P1^0口作为AD输入来用
+   6   1         P1ASF=0X01;//P1^0口作为模拟ADC功能使用（采集这个引脚的数据）
+   7   1      //   EA=1;//打开总中断
+   8   1      //   IE=0XB0;//打开ADC中断
+   9   1         ADC_RES=0;//清除原来的数据
+  10   1         ADC_RESL=0;  
+  11   1         _nop_;
+*** WARNING C275 IN LINE 11 OF AD.C: expression with possibly no effect
+  12   1         _nop_;
+*** WARNING C275 IN LINE 12 OF AD.C: expression with possibly no effect
+  13   1         _nop_;
+*** WARNING C275 IN LINE 13 OF AD.C: expression with possibly no effect
+  14   1         _nop_;
+*** WARNING C275 IN LINE 14 OF AD.C: expression with possibly no effect
+  15   1         _nop_;  
+*** WARNING C275 IN LINE 15 OF AD.C: expression with possibly no effect
+  16   1      }
+  17          /**************************得到ADC的值**********************************/
+  18          int AD_get()
+  19          {
+  20   1          static  unsigned int i=0;
+  21   1          static  double k=0;
+  22   1          while(!(ADC_CONTR&0x10));       //等待转换完成
+  23   1          i=ADC_RES;              //取高八位
+  24   1          i=i<<2;               
+  25   1          i=i|ADC_RESL;           //取低二位
+  26   1          ADC_CONTR=0XC8;//初始化
+  27   1          return i;
+  28   1      }
+*** WARNING C280 IN LINE 21 OF AD.C: 'k': unreferenced local variable
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     54    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      6    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  6 WARNING(S),  0 ERROR(S)
