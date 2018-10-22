@@ -1,0 +1,282 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        11/01/2017  19:19:34  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL4___MDK5\MDK\C51\BIN\BL51.EXE main.obj TO CAUC_Lab
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  D:\KEIL4___MDK5\MDK\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL4___MDK5\MDK\C51\LIB\C51S.LIB (?C?OFFXADD)
+  D:\KEIL4___MDK5\MDK\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  CAUC_Lab (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         ?DT?MAIN
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0010H                  *** GAP ***
+            CODE    0013H     0003H     ABSOLUTE     
+                    0016H     07EAH                  *** GAP ***
+            CODE    0800H     0200H     UNIT         ?CO?MAIN
+            CODE    0A00H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0A8CH     0067H     UNIT         ?PR?DISPLAY_LTOR?MAIN
+            CODE    0AF3H     0067H     UNIT         ?PR?DISPLAY2_LTOR?MAIN
+            CODE    0B5AH     0067H     UNIT         ?PR?DISPLAY4?MAIN
+            CODE    0BC1H     0062H     UNIT         ?PR?INTERSVR0?MAIN
+            CODE    0C23H     0044H     UNIT         ?PR?_DELAYUS?MAIN
+            CODE    0C67H     002BH     UNIT         ?PR?DISPLAY3?MAIN
+            CODE    0C92H     0026H     UNIT         ?PR?MAIN?MAIN
+            CODE    0CB8H     000CH     UNIT         ?C?LIB_CODE
+            CODE    0CC4H     000AH     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   CAUC_Lab (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?INTERSVR0?MAIN
+  +--> ?PR?DISPLAY_LTOR?MAIN
+  +--> ?PR?DISPLAY3?MAIN
+  +--> ?PR?DISPLAY4?MAIN
+  +--> ?PR?DISPLAY2_LTOR?MAIN
+
+?PR?DISPLAY_LTOR?MAIN
+  +--> ?PR?_DELAYUS?MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/01/2017  19:19:34  PAGE 2
+
+
+  +--> ?CO?MAIN
+
+?PR?DISPLAY3?MAIN
+  +--> ?PR?_DELAYUS?MAIN
+  +--> ?CO?MAIN
+
+?PR?DISPLAY4?MAIN
+  +--> ?PR?_DELAYUS?MAIN
+  +--> ?CO?MAIN
+
+?PR?DISPLAY2_LTOR?MAIN
+  +--> ?PR?_DELAYUS?MAIN
+  +--> ?CO?MAIN
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?_DELAYUS?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  CAUC_Lab (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:0980H         PUBLIC        picture
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  C:0900H         PUBLIC        loveyou
+  D:00B8H         PUBLIC        IP
+  C:0A8CH         PUBLIC        display_ltor
+  D:0008H         PUBLIC        KY
+  C:0C92H         PUBLIC        main
+  C:0C67H         PUBLIC        display3
+  C:0B5AH         PUBLIC        display4
+  D:0009H         PUBLIC        disp
+  C:0BC1H         PUBLIC        intersvr0
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:0C55H         PUBLIC        _DelayUs
+  D:000AH         PUBLIC        pic
+  C:0800H         PUBLIC        text
+  B:00A8H.2       PUBLIC        EX1
+  B:0088H.2       PUBLIC        IT1
+  C:0AF3H         PUBLIC        display2_ltor
+  D:000BH         PUBLIC        num
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/01/2017  19:19:34  PAGE 3
+
+
+  D:00C8H         PUBLIC        T2CON
+  B:00B0H.2       PUBLIC        KEY
+  C:0880H         PUBLIC        text2
+  D:00D0H         PUBLIC        PSW
+  C:0C23H         SYMBOL        L?0046
+  -------         PROC          L?0045
+  -------         ENDPROC       L?0045
+  C:0C23H         SYMBOL        L?0046
+  -------         PROC          _DELAYUS
+  D:0006H         SYMBOL        N
+  -------         DO            
+  D:0004H         SYMBOL        x
+  -------         ENDDO         
+  C:0C55H         LINE#         79
+  C:0C55H         LINE#         80
+  C:0C55H         LINE#         82
+  C:0C66H         LINE#         83
+  -------         ENDPROC       _DELAYUS
+  -------         PROC          INTERSVR0
+  C:0BC1H         LINE#         86
+  C:0BDEH         LINE#         88
+  C:0BE1H         LINE#         89
+  C:0BE5H         LINE#         90
+  C:0BE5H         LINE#         91
+  C:0BE7H         LINE#         92
+  C:0BF6H         LINE#         93
+  C:0BFBH         LINE#         94
+  C:0BFBH         LINE#         95
+  C:0C00H         LINE#         96
+  C:0C05H         LINE#         97
+  C:0C08H         LINE#         98
+  C:0C08H         LINE#         99
+  C:0C08H         LINE#         100
+  -------         ENDPROC       INTERSVR0
+  -------         PROC          DISPLAY_LTOR
+  -------         DO            
+  D:0003H         SYMBOL        i
+  D:0002H         SYMBOL        d
+  -------         ENDDO         
+  C:0A8CH         LINE#         102
+  C:0A8CH         LINE#         103
+  C:0A8CH         LINE#         107
+  C:0A98H         LINE#         108
+  C:0AA2H         LINE#         109
+  C:0AA9H         LINE#         110
+  C:0AABH         LINE#         111
+  C:0AABH         LINE#         112
+  C:0ACDH         LINE#         113
+  C:0AE9H         LINE#         114
+  C:0AE9H         LINE#         115
+  C:0AE9H         LINE#         116
+  C:0AE9H         LINE#         117
+  C:0AE9H         LINE#         118
+  C:0AECH         LINE#         119
+  C:0AF2H         LINE#         121
+  -------         ENDPROC       DISPLAY_LTOR
+  -------         PROC          DISPLAY2_LTOR
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/01/2017  19:19:34  PAGE 4
+
+
+  -------         DO            
+  D:0003H         SYMBOL        i
+  D:0002H         SYMBOL        d
+  -------         ENDDO         
+  C:0AF3H         LINE#         122
+  C:0AF3H         LINE#         123
+  C:0AF3H         LINE#         127
+  C:0AFFH         LINE#         128
+  C:0B09H         LINE#         129
+  C:0B10H         LINE#         130
+  C:0B12H         LINE#         131
+  C:0B12H         LINE#         132
+  C:0B34H         LINE#         133
+  C:0B50H         LINE#         134
+  C:0B50H         LINE#         135
+  C:0B50H         LINE#         136
+  C:0B50H         LINE#         137
+  C:0B50H         LINE#         138
+  C:0B53H         LINE#         139
+  C:0B59H         LINE#         141
+  -------         ENDPROC       DISPLAY2_LTOR
+  -------         PROC          DISPLAY3
+  -------         DO            
+  D:0003H         SYMBOL        i
+  D:0002H         SYMBOL        d
+  -------         ENDDO         
+  C:0C67H         LINE#         143
+  C:0C67H         LINE#         144
+  C:0C67H         LINE#         147
+  C:0C6EH         LINE#         148
+  C:0C70H         LINE#         149
+  C:0C70H         LINE#         150
+  C:0C80H         LINE#         151
+  C:0C8AH         LINE#         152
+  C:0C8AH         LINE#         153
+  C:0C8AH         LINE#         154
+  C:0C8AH         LINE#         155
+  C:0C8AH         LINE#         156
+  C:0C8DH         LINE#         157
+  C:0C91H         LINE#         158
+  -------         ENDPROC       DISPLAY3
+  -------         PROC          DISPLAY4
+  -------         DO            
+  D:0003H         SYMBOL        i
+  D:0002H         SYMBOL        d
+  -------         ENDDO         
+  C:0B5AH         LINE#         160
+  C:0B5AH         LINE#         161
+  C:0B5AH         LINE#         165
+  C:0B66H         LINE#         166
+  C:0B70H         LINE#         167
+  C:0B77H         LINE#         168
+  C:0B79H         LINE#         169
+  C:0B79H         LINE#         170
+  C:0B9BH         LINE#         171
+  C:0BB7H         LINE#         172
+  C:0BB7H         LINE#         173
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/01/2017  19:19:34  PAGE 5
+
+
+  C:0BB7H         LINE#         174
+  C:0BB7H         LINE#         175
+  C:0BB7H         LINE#         176
+  C:0BBAH         LINE#         177
+  C:0BC0H         LINE#         179
+  -------         ENDPROC       DISPLAY4
+  -------         PROC          MAIN
+  C:0C92H         LINE#         181
+  C:0C92H         LINE#         182
+  C:0C92H         LINE#         183
+  C:0C94H         LINE#         184
+  C:0C96H         LINE#         185
+  C:0C98H         LINE#         186
+  C:0C9BH         LINE#         187
+  C:0C9DH         LINE#         188
+  C:0C9DH         LINE#         189
+  C:0C9DH         LINE#         190
+  C:0CA0H         LINE#         191
+  C:0CA0H         LINE#         192
+  C:0CA7H         LINE#         193
+  C:0CA7H         LINE#         194
+  C:0CA9H         LINE#         195
+  C:0CACH         LINE#         196
+  C:0CACH         LINE#         197
+  C:0CB6H         LINE#         198
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?OFFXADD
+  C:0CB8H         PUBLIC        ?C?OFFXADD
+  -------         ENDMOD        ?C?OFFXADD
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0438H BYTE (52%) *
+******************************************************************************
+
+Program Size: data=13.0 xdata=0 code=1236
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
